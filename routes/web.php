@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+});
+
+Route::get('cadastrar participante', function () {
+    return view('cad_participante');
 });
