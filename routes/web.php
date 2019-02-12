@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('cadastrar participante', function () {
     return view('cad_participante');
 });
+
+Route::get('cadastrar contrato', function () {
+    return view('cad_contrato');
+});

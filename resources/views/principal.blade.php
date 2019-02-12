@@ -111,7 +111,7 @@
 						</a>
 						<ul class="sub">
 							<li>
-								<a class="" href="form_component.html">Cadastrar Contrato</a>
+								<a class="" href="cadastrar contrato">Cadastrar Contrato</a>
 							</li>
 							<li>
 								<a class="" href="form_validation.html">Listar contratos</a>
