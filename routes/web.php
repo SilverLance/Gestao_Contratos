@@ -22,3 +22,11 @@ Route::get('cadastrar participante', function () {
 Route::get('cadastrar contrato', function () {
     return view('cad_contrato');
 });
+
+Route::get('listar participantes', function () {
+    return view('listar_participantes');
+});
+
+Route::get('contratos', function () {
+    return view('listar_contratos');
+});

@@ -114,7 +114,7 @@
 								<a class="" href="cadastrar contrato">Cadastrar Contrato</a>
 							</li>
 							<li>
-								<a class="" href="form_validation.html">Listar contratos</a>
+								<a class="" href="contratos">Listar contratos</a>
 							</li>
 						</ul>
 					</li>
@@ -129,7 +129,7 @@
 								<a class="" href="cadastrar participante">Cadastrar Participantes</a>
 							</li>
 							<li>
-								<a class="" href="buttons.html">Listar Participantes</a>
+								<a class="" href="listar participantes">Listar Participantes</a>
 							</li>
 						</ul>
 					</li>
