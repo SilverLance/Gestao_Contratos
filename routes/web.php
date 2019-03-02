@@ -16,17 +16,17 @@ Route::get('/', function () {
 });
 
 Route::get('cadastrar participante', function () {
-    return view('cad_participante');
+    return view('Participante.cad_participante');
 });
 
 Route::get('cadastrar contrato', function () {
-    return view('cad_contrato');
+    return view('Contrato.cad_contrato');
 });
 
 Route::get('listar participantes', function () {
-    return view('listar_participantes');
+    return view('Participante.listar_participantes');
 });
 
 Route::get('contratos', function () {
-    return view('listar_contratos');
+    return view('Contrato.listar_contratos');
 });
