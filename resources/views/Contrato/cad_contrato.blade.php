@@ -1,4 +1,4 @@
-@extends('principal') @section('conteudo')
+@extends('Layout.principal') @section('conteudo')
 <section class="panel">
     <header class="panel-heading">
         Cadastrar Contrato

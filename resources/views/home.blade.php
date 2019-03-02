@@ -1,4 +1,4 @@
-@extends('principal') @section('conteudo')
+@extends('Layout.principal') @section('conteudo')
 <div class="row">
     <div class="col-lg-12">
         <section class="panel">
