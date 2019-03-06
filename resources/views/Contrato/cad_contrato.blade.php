@@ -5,7 +5,7 @@
     </header>
     <div class="panel-body">
         <div class="form">
-            <form class="form-validate form-horizontal " id="register_form" method="get" action="">
+            <form class="form-validate form-horizontal " id="register_form" method="get" action="criaContrato">
                 <div class="form-group ">
                     <label for="num_contrato" class="control-label col-lg-2">Número Contrato <span
                             class="required">*</span></label>
@@ -68,44 +68,18 @@
                     </div>
                 </div>
                 <div class="form-group ">
-
-                    <div class="row" style="margin: 30px; margin-top:10px">
-                        <div class="col-lg-12">
-                            <section class="panel">
-                                <header class="panel-heading">
-                                    Contrato
-                                </header>
-                                <div class="panel-body">
-                                    <div class="TabControl">
-                                        <div id="header">
-                                            <ul class="abas">
-                                                <li>
-                                                    <div class="aba">
-                                                        <span>Links</span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="aba">
-                                                        <span>Arquivos</span>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div id="content">
-                                            <div class="conteudo">
-                                                Conteúdo da aba 1
-                                            </div>
-                                            <div class="conteudo">
-                                                Conteúdo da aba 2
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-
-                        </div>
+                    <label for="num_edital" class="control-label col-lg-2">Arquivos <span
+                            class="required">*</span></label>
+                    <div class="col-lg-10">
+                        <input class="form-control " id="arquivo" name="arquivo" type="file" />
                     </div>
-
+                </div>
+                <div class="form-group ">
+                    <label for="num_edital" class="control-label col-lg-2">Links <span
+                            class="required">*</span></label>
+                    <div class="col-lg-10">
+                        <input class="form-control " id="link" name="link" type="text" />
+                    </div>
                 </div>
                 <div class="form-group">
                     <div class="col-lg-offset-2 col-lg-10">

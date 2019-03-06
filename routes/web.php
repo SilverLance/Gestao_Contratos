@@ -27,6 +27,6 @@ Route::get('listar participantes', function () {
     return view('Participante.listar_participantes');
 });
 
-Route::get('contratos', function () {
-    return view('Contrato.listar_contratos');
-});
+Route::get('contratos', 'ContratoController@lista');
+
+Route::get('criaContrato', 'ContratoController@cria');
