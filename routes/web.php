@@ -23,10 +23,12 @@ Route::get('cadastrar contrato', function () {
     return view('Contrato.cad_contrato');
 });
 
-Route::get('listar participantes', function () {
-    return view('Participante.listar_participantes');
-});
+Route::get('listar participantes', 'ParticipanteController@lista');
 
 Route::get('contratos', 'ContratoController@lista');
 
 Route::get('criaContrato', 'ContratoController@cria');
+
+Route::get('arquivo', function () {
+    return view('Contrato.arquivo');
+});

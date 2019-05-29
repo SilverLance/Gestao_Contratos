@@ -14,16 +14,27 @@ class ContratoController extends Controller
         return view('Contrato.listar_contratos')->with('contratos', $contratos);
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function cria()
     {
         $num_contrato = $_REQUEST['num_contrato'];
         $objeto = $_REQUEST['objeto'];
-        $inicio = implode("-",array_reverse(explode("/",$_REQUEST['inicio'])));
-        $fim = implode("-",array_reverse(explode("/",$_REQUEST['fim'])));
+        $inicio = implode("-", array_reverse(explode("/", $_REQUEST['inicio'])));
+        $fim = implode("-", array_reverse(explode("/", $_REQUEST['fim'])));
         $num_edital = $_REQUEST['num_edital'];
         $modalidade = $_REQUEST['modalidade'];
         $arquivo = $_REQUEST['arquivo'];
         $link = $_REQUEST['link'];
+
+        DB:: insert('insert into contrato (numContrato, Objeto_contrato, data_inicio, data_fim, num_ano, modalidade, documentos, links) values(?,?,?,?,?,?,?,?)', array($num_contrato, $objeto, $inicio, $fim, $num_edital, $modalidade, $arquivo, $link));
+        $contratos = Contrato::all();
+        return view('Contrato.listar_contratos')->with('contratos', $contratos);
+    }
+
+    public function ler_arquivo()
+    {
 
         DB:: insert('insert into contrato (numContrato, Objeto_contrato, data_inicio, data_fim, num_ano, modalidade, documentos, links) values(?,?,?,?,?,?,?,?)', array($num_contrato, $objeto, $inicio, $fim, $num_edital, $modalidade, $arquivo, $link));
         $contratos = Contrato::all();
