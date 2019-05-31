@@ -40,4 +40,12 @@ class ContratoController extends Controller
         $contratos = Contrato::all();
         return view('Contrato.listar_contratos')->with('contratos', $contratos);
     }
+
+    public function remove($id){
+        $contratos = Contrato::find($id);
+        $contratos->delete();
+        $contratos = Contrato::all();
+        return view('Contrato.listar_contratos')->with('contratos', $contratos);
+    }
 }
+

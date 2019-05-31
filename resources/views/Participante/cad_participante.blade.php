@@ -6,7 +6,7 @@
         </header>
         <div class="panel-body">
             <div class="form">
-                <form class="form-validate form-horizontal " id="register_form" method="get" action="">
+                <form class="form-validate form-horizontal " id="register_form" method="get" action="criaParticipante">
                     <div class="form-group ">
                         <label for="nome" class="control-label col-lg-2">Nome <span class="required">*</span></label>
                         <div class="col-lg-10">

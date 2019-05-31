@@ -29,6 +29,10 @@ Route::get('contratos', 'ContratoController@lista');
 
 Route::get('criaContrato', 'ContratoController@cria');
 
+Route::get('criaParticipante', 'ParticipanteController@cria');
+
+Route::get('remove/{id}', 'ContratoController@remove')->name('remove');
+
 Route::get('arquivo', function () {
     return view('Contrato.arquivo');
 });

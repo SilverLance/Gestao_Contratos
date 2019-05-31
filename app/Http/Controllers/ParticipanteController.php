@@ -14,4 +14,20 @@ class ParticipanteController extends Controller
         $participantes = Participante::all();
         return view('Participante.listar_participantes')->with('participantes', $participantes);
     }
+
+    public function cria()
+    {
+        $nome = $_REQUEST['nome'];
+        $matricula = $_REQUEST['matricula'];
+        $cpf = $_REQUEST['cpf'];
+        $rg = $_REQUEST['rg'];
+        $cargo = $_REQUEST['cargo'];
+        $setor = $_REQUEST['setor'];
+        $login = $_REQUEST['email'];
+        $senha = $_REQUEST['senha'];
+
+        DB:: insert('insert into participante (nome, matricula, cpf, rg, setor, cargo, login, senha) values(?,?,?,?,?,?,?,?)', array($nome, $matricula, $cpf, $rg, $setor, $cargo, $login, $senha));
+        $participantes = Participante::all();
+        return view('Participante.listar_participantes')->with('participantes', $participantes);
+    }
 }
