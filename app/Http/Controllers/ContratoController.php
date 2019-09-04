@@ -10,8 +10,16 @@ class ContratoController extends Controller
 {
     public function lista()
     {
-        $contratos = Contrato::all();
+        $contratos = DB::table('contrato')->paginate(8);
+
+        //$contratos = Contrato::all();
         return view('Contrato.listar_contratos')->with('contratos', $contratos);
+    }
+
+    public function listaAtraso()
+    {
+        $contratos = Contrato::all();
+        return view('home')->with('contratos', $contratos);
     }
 
     /**
@@ -29,7 +37,9 @@ class ContratoController extends Controller
         $link = $_REQUEST['link'];
 
         DB:: insert('insert into contrato (numContrato, Objeto_contrato, data_inicio, data_fim, num_ano, modalidade, documentos, links) values(?,?,?,?,?,?,?,?)', array($num_contrato, $objeto, $inicio, $fim, $num_edital, $modalidade, $arquivo, $link));
-        $contratos = Contrato::all();
+        $contratos = DB::table('contrato')->paginate(8);
+
+        //$contratos = Contrato::all();
         return view('Contrato.listar_contratos')->with('contratos', $contratos);
     }
 
@@ -41,11 +51,11 @@ class ContratoController extends Controller
         return view('Contrato.listar_contratos')->with('contratos', $contratos);
     }
 
+
+
     public function remove($id){
-        $contratos = Contrato::find($id);
-        $contratos->delete();
-        $contratos = Contrato::all();
-        return view('Contrato.listar_contratos')->with('contratos', $contratos);
+        DB:: delete('delete from contrato where id = '.$id);
+        return redirect()->to('contratos')->send();
     }
 }
 

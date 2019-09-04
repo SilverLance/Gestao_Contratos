@@ -35,13 +35,14 @@
                             <td>
                                 <div class="btn-group">
                                     <a class="btn btn-success" href="#"><i class="icon_pencil"></i></a>
-                                    <a class="btn btn-danger" href="{{route('remove', $contrato->numContrato)}}"><i class="icon_close_alt2"></i></a>
+                                    <a class="btn btn-danger" onclick="return confirm('Deseja realmente deletar o contrato nº <?=$contrato->numContrato?>?')" href="{{route('remove', $contrato->id)}}"><i class="icon_trash_alt"></i></a>
                                 </div>
                             </td>
                         </tr>
                     @endforeach
                     </tbody>
                 </table>
+                {!! $contratos->links() !!}
             </div>
         </section>
     @endif

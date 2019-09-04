@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="img/logo.png">
 
-    <title>Gcon-pub</title>
+    <title>ColaboreGA</title>
 
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -31,6 +31,7 @@
     <link href="css/style-responsive.css" rel="stylesheet"/>
     <link href="css/xcharts.min.css" rel=" stylesheet">
     <link href="css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <link href="css/abaStyle.css" rel="stylesheet">
 
 </head>
 
@@ -47,14 +48,14 @@
         </div>
 
         <!--logo start-->
-        <a href="/" class="logo">Gcon
-            <span class="lite">Pub</span>
+        <a href="/" class="logo">Colabore
+            <span class="lite">GA</span>
         </a>
         <!--logo end-->
 
         <div class="top-nav notification-row">
             <!-- notificatoin dropdown start-->
-            <ul class="nav pull-right top-menu">
+            <ul class="nav pull-right/ top-menu">
                 <!-- user login dropdown start-->
                 <li class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
@@ -131,6 +132,24 @@
                         </li>
                         <li>
                             <a class="" href="listar participantes">Listar Participantes</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;" class="">
+                        <i class="icon_desktop"></i>
+                        <span>TOR</span>
+                        <span class="menu-arrow arrow_carrot-right"></span>
+                    </a>
+                    <ul class="sub">
+                        <li>
+                            <a class="" href="PessoaF">TOR Pessoa Fisica</a>
+                        </li>
+                        <li>
+                            <a class="" href="PessoaJ">TOR Pessoa Juridica</a>
+                        </li>
+                        <li>
+                            <a class="" href="Eventos">TOR Eventos</a>
                         </li>
                     </ul>
                 </li>

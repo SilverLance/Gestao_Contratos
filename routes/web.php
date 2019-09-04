@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'ContratoController@listaAtraso');
 
 Route::get('cadastrar participante', function () {
     return view('Participante.cad_participante');
@@ -21,6 +19,18 @@ Route::get('cadastrar participante', function () {
 
 Route::get('cadastrar contrato', function () {
     return view('Contrato.cad_contrato');
+});
+
+Route::get('termo', function () {
+    return view('TermoReferencia.TermoInt');
+});
+
+Route::get('PessoaF', function () {
+    return view('TermoReferencia.TORpessoafisica');
+});
+
+Route::get('PessoaJ', function () {
+    return view('TermoReferencia.TORpessoajuridica');
 });
 
 Route::get('listar participantes', 'ParticipanteController@lista');
