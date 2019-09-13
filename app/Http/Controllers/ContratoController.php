@@ -52,10 +52,19 @@ class ContratoController extends Controller
     }
 
 
-
-    public function remove($id){
-        DB:: delete('delete from contrato where id = '.$id);
+    public function remove($id)
+    {
+        DB:: delete('delete from contrato where id = ' . $id);
         return redirect()->to('contratos')->send();
     }
+
+    public function mostra($id){
+        $contrato = Contrato::find($id);
+        if(empty($contrato)) {
+            return "Esse contrato não existe";
+        }
+        return view('Contrato.edit_contrato')->with('contrato', $contrato);
+    }
+
 }
 

@@ -33,9 +33,15 @@ Route::get('PessoaJ', function () {
     return view('TermoReferencia.TORpessoajuridica');
 });
 
+Route::get('edit_contrato', function () {
+    return view('Contrato.edit_contrato');
+});
+
 Route::get('listar participantes', 'ParticipanteController@lista');
 
 Route::get('contratos', 'ContratoController@lista');
+
+Route::get('edit_contrato', 'ContratoController@edit');
 
 Route::get('criaContrato', 'ContratoController@cria');
 
@@ -43,6 +49,4 @@ Route::get('criaParticipante', 'ParticipanteController@cria');
 
 Route::get('remove/{id}', 'ContratoController@remove')->name('remove');
 
-Route::get('arquivo', function () {
-    return view('Contrato.arquivo');
-});
+Route::get('mostra/{id}', 'ContratoController@mostra')->name('mostra');

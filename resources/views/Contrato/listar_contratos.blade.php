@@ -34,7 +34,7 @@
                             <td><a href='arquivo?id={{$contrato->numContrato}}'>{{$contrato->documentos}}</a></td>
                             <td>
                                 <div class="btn-group">
-                                    <a class="btn btn-success" href="#"><i class="icon_pencil"></i></a>
+                                    <a class="btn btn-success" href="{{route('mostra', $contrato->id)}}"><i class="icon_pencil"></i></a>
                                     <a class="btn btn-danger" onclick="return confirm('Deseja realmente deletar o contrato nº <?=$contrato->numContrato?>?')" href="{{route('remove', $contrato->id)}}"><i class="icon_trash_alt"></i></a>
                                 </div>
                             </td>

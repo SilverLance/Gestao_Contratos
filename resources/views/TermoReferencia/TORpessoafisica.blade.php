@@ -11,10 +11,10 @@
 
                         <ul class="nav nav-tabs">
                             <li class="active"><a data-toggle="tab" href="#home">Identificação</a></li>
-                            <li><a data-toggle="tab" href="#menu1">Contrantante</a></li>
+                     <li><a data-toggle="tab" href="#menu1">Contrantante</a></li>
                             <li><a data-toggle="tab" href="#menu2">Antecedentes</a></li>
                             <li><a data-toggle="tab" href="#menu3">Objetivos</a></li>
-                            <li><a data-toggle="tab" href="#menu4">Atividades/Produtos</a></li>
+                           <li><a data-toggle="tab" href="#menu4">Atividades/Produtos</a></li>
                             <li><a data-toggle="tab" href="#menu5">Apresentação</a></li>
                             <li><a data-toggle="tab" href="#menu6">Prazos</a></li>
                             <li><a data-toggle="tab" href="#menu7">Custos</a></li>
@@ -61,7 +61,7 @@
                                     <label for="titulo" class="control-label col-lg-2">Titulo do TOR <span
                                                 class="required">*</span></label>
                                     <div class="col-lg-10">
-                                        <input class="form-control" id="titulo" name="titulo" type="text" placeholder="(Especificação da atividade a ser contratada) (O título deve se referir à atividade e não ao nome do contratado.)
+                                <input class="form-control" id="titulo" name="titulo" type="text" placeholder="(Especificação da atividade a ser contratada) (O título deve se referir à atividade e não ao nome do contratado.)
 "/>
                                     </div>
                                 </div>
@@ -70,7 +70,7 @@
                                                 class="required">*</span></label>
                                     <div class="col-lg-10">
                                         <input class="form-control " id="acao" name="acao" type="text"
-                                               placeholder="(Descrição da etapa/fase prevista no Plano de Ação e de Investimentos e Plano de Aquisições)."/>
+                                        placeholder="(Descrição da etapa/fase prevista no Plano de Ação e de Investimentos e Plano de Aquisições)."/>
                                     </div>
                                 </div>
                                 <div class="form-group ">
@@ -83,7 +83,7 @@
                                 </div>
                                 <div class="form-group ">
                                     <a data-toggle="tab" href="#menu1">
-                                        <button class="btn btn-primary">Avançar</button>
+                                        <button class="btn btn-primary next">Avançar</button>
                                     </a>
                                 </div>
                             </div>
@@ -123,10 +123,10 @@
                                 </div>
                                 <div class="form-group ">
                                     <a data-toggle="tab" href="#home">
-                                        <button class="btn btn-primary">Retornar</button>
+                                        <button class="btn btn-primary previous">Retornar</button>
                                     </a>
                                     <a data-toggle="tab" href="#menu2">
-                                        <button class="btn btn-primary">Avançar</button>
+                                        <button class="btn btn-primary next">Avançar</button>
                                     </a>
                                 </div>
                             </div>
@@ -315,4 +315,40 @@ Os documentos deverão ser encaminhados ao Contratante, em versão preliminar e,
         </form>
         </div>
     </section>
+    <script>
+    $(document).ready(function() {
+    /*disable non active tabs*/
+    $('.nav li').not('.active').addClass('disabled');
+    $('.nav li').not('.active').find('a').removeAttr("data-toggle");
+
+    $('button.next').click(function(){
+        $lia = $('.nav li.active');
+        $li = $('.nav li.active').next('li');
+
+        /*enable next tab*/
+        $li.removeClass('disabled');
+        $li.find('a').attr("data-toggle","tab");
+        /*toggle tab*/
+        $li.find('a').click();
+
+        /*disable previous tab*/
+        $lia.addClass('disabled');
+        $lia.find('a').removeAttr("data-toggle");
+    });
+    $('button.previous').click(function(){
+        $lia = $('.nav li.active');
+        $li = $('.nav li.active').prev('li');
+
+        /*enable next tab*/
+        $li.removeClass('disabled');
+        $li.find('a').attr("data-toggle","tab");
+        /*toggle tab*/
+        $li.find('a').click();
+
+        /*disable previous tab*/
+        $lia.addClass('disabled');
+        $lia.find('a').removeAttr("data-toggle");
+    });
+});
+    </script>
 @stop
